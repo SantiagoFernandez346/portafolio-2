@@ -546,6 +546,11 @@ section.my-work .section-heading {
     padding: 80px 45px 50px 45px;
 }
 
+section.my-work .container {
+    text-align: center;
+    padding: 80px 45px 50px 45px;
+}
+
 .isotope-wrapper {
     position: relative;
     width: 100%;
@@ -637,11 +642,13 @@ figure.snip1321 figcaption {
   position: absolute;
   opacity: 0;
   z-index: 1;
+  text-align: center;
 }
 figure.snip1321 h4 {
     margin-top: 15px;
   margin-bottom: 5px;
   color: #232323;
+  text-align: center;
 }
 figure.snip1321 span {
     font-size: 14px;
