@@ -1,295 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Santiago Fernandez · Desarrollador Frontend</title>
+  <meta name="description" content="Portfolio de Santiago Fernandez, desarrollador frontend junior en Buenos Aires. Proyectos con React, TypeScript, Node.js y Supabase.">
+  <meta property="og:title" content="Santiago Fernandez · Desarrollador Frontend">
+  <meta property="og:description" content="Proyectos con React, TypeScript, Node.js y Supabase.">
+  <meta property="og:image" content="https://santiagofernandez346.github.io/portafolio-2/assets/img/santiago.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e7c86'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3ESF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Aplica tema e idioma guardados antes de dibujar, para evitar parpadeos
+    try {
+      var t = localStorage.getItem('tema');
+      if (t === 'oscuro' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="saltar" href="#contenido" data-i18n="skip">Saltar al contenido</a>
 
-    <title>Santiago Fernandez Portafolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <header class="nav">
+    <div class="contenedor nav__fila">
+      <a class="marca" href="#inicio" aria-label="Inicio">
+        <span class="marca__logo">SF</span>
+        <span class="marca__nombre">Santiago Fernandez</span>
+      </a>
 
-    <!-- Css Adicional -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css" />
-    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
-    <link rel="stylesheet" href="assets/css/owl.css" />
-    <link rel="stylesheet" href="assets/css/lightbox.css" />
-    <link rel="stylesheet" href="assets/css/custom-overlays.css" />
-  </head>
+      <nav class="nav__links" id="menu" aria-label="Principal">
+        <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="#habilidades" data-i18n="nav.skills">Habilidades</a>
+        <a href="#experiencia" data-i18n="nav.experience">Experiencia</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
 
-  <body>
-    <div id="page-wraper">
-      <!-- Sidebar Menu -->
-      <div class="responsive-nav">
-        <i class="fa fa-bars" id="menu-toggle"></i>
-        <div id="menu" class="menu">
-          <i class="fa fa-times" id="menu-close"></i>
-          <div class="container">
-            <div class="image">
-              <a href="#"><img src="assets/images/yo.png" alt="" /></a>
-            </div>
-            <div class="author-content">
-              <h4 id="author-name">Santiago Fernandez</h4>
-              <span id="author-title">Web Designer</span>
-            </div>
-            <nav class="main-nav" role="navigation">
-              <ul class="main-menu">
-                <li><a href="#section1" id="menu-about">About Me</a></li>
-                <li><a href="#section2" id="menu-skills">What I’m good at</a></li>
-                <li><a href="#section3" id="menu-work">My Work</a></li>
-                <li><a href="#section4" id="menu-contact">Contact Me</a></li>
-              </ul>
-            </nav>
-            <div class="social-network">
-              <ul class="soial-icons">                             
-                <li>
-                  <a href="https://github.com/SantiagoFernandez346"><i class="fa fa-github"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/santiago-fernandez-7a13aa230/"><i class="fa fa-linkedin"></i></a>
-                </li>
-                <li>
-                  <a href="assets/files/curriculum.pdf" download title="Download Curriculum"><i class="fa fa-download"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="copyright-text">
-              <p>Copyright 2025 Santiago Fernandez</p>
-              <div class="language-buttons" style="margin-top: 10px;">
-                <button id="btn-es" type="button" style="margin-right: 10px; padding: 5px 10px; cursor: pointer;">Español</button>
-                <button id="btn-en" type="button" style="padding: 5px 10px; cursor: pointer;">English</button>
-              </div>
-            </div>
-          </div>
+      <div class="nav__acciones">
+        <div class="idioma" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="icono-btn" id="tema" aria-label="Cambiar tema">
+          <svg class="icono-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+          <svg class="icono-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <button type="button" class="icono-btn nav__hamburguesa" id="abrir-menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Inicio -->
+    <section class="hero contenedor" id="inicio">
+      <div class="hero__texto">
+        <p class="disponible"><span class="punto" aria-hidden="true"></span><span data-i18n="hero.available">Disponible para trabajar</span></p>
+        <h1><span data-i18n="hero.hello">Hola, soy</span> <span class="resaltado">Santiago</span>.</h1>
+        <p class="hero__rol" data-i18n="hero.role">Desarrollador Frontend Junior</p>
+        <p class="hero__intro" data-i18n="hero.intro">Construyo interfaces claras, rápidas y accesibles con React y TypeScript, y me gusta entender también lo que pasa del lado del servidor.</p>
+        <div class="hero__botones">
+          <a class="btn btn--primario" href="#proyectos" data-i18n="hero.cta">Ver proyectos</a>
+          <a class="btn btn--secundario" data-cv href="assets/files/cv-santiago-fernandez-es.pdf" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+            <span data-i18n="cv.download">Descargar CV</span>
+          </a>
+        </div>
+        <ul class="redes" aria-label="Redes">
+          <li><a href="https://github.com/SantiagoFernandez346" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" class="relleno"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/santiago-fernandez-7a13aa230/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" class="relleno"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a></li>
+          <li><a href="mailto:santiagofernandez3456@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="hero__foto">
+        <div class="foto-marco">
+          <img src="assets/img/santiago.jpg" alt="Foto de Santiago Fernandez" width="320" height="320">
         </div>
       </div>
-      <section class="section about-me" data-section="section1">
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="section1-title">About Me</h2>
-            <div class="line-dec"></div>
-            <span id="section1-content"
-              >Highly motivated and results-oriented Junior Frontend Developer with 3 years of programming experience and a strong passion for creating engaging user experiences. Eager to contribute technical skills in HTML5, CSS, JavaScript, React and MySQL to a challenging role where I can apply my knowledge and contribute to innovative web development projects. Committed to continuous learning and professional growth in a collaborative team environment.
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="seccion contenedor" id="sobre-mi">
+      <h2 class="titulo"><span class="titulo__num">01</span><span data-i18n="about.title">Sobre mí</span></h2>
+      <div class="sobre">
+        <div class="sobre__texto">
+          <p data-i18n="about.p1">Programo desde 2021. Empecé haciendo el frontend del sitio web de una empresa y desde entonces no paré: hoy estudio la Tecnicatura en Programación en la UNAHUR y sigo armando proyectos para aprender cosas nuevas.</p>
+          <p data-i18n="about.p2">Trabajo principalmente con React, TypeScript y JavaScript, y tengo base en backend con Node.js, APIs REST y bases de datos SQL. Busco mi próximo rol frontend en un equipo donde pueda aportar desde el primer día y seguir creciendo.</p>
+        </div>
+        <dl class="datos">
+          <div><dt data-i18n="about.location">Ubicación</dt><dd>Buenos Aires, Argentina</dd></div>
+          <div><dt data-i18n="about.studies">Estudios</dt><dd data-i18n="about.studiesValue">Tecnicatura en Programación · UNAHUR</dd></div>
+          <div><dt data-i18n="about.languages">Idiomas</dt><dd data-i18n="about.languagesValue">Español nativo · Inglés B2</dd></div>
+          <div><dt data-i18n="about.coding">Programando desde</dt><dd>2021</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="seccion contenedor" id="proyectos">
+      <h2 class="titulo"><span class="titulo__num">02</span><span data-i18n="projects.title">Proyectos</span></h2>
+
+      <article class="proyecto proyecto--destacado">
+        <a class="proyecto__imagen" href="https://panel-gastos-liart.vercel.app/" target="_blank" rel="noopener">
+          <img src="assets/img/panel-gastos.svg" alt="Vista previa del Panel de Gastos" loading="lazy" width="1200" height="740">
+        </a>
+        <div class="proyecto__cuerpo">
+          <p class="etiqueta-nuevo" data-i18n="projects.latest">Último proyecto</p>
+          <h3 data-i18n="p1.title">Panel de Gastos</h3>
+          <p data-i18n="p1.desc">Aplicación de finanzas personales: registrás ingresos y gastos, ves gráficos de los últimos meses, ponés presupuestos por categoría y exportás todo a CSV.</p>
+          <ul class="puntos">
+            <li data-i18n="p1.b1">Login con Supabase y base PostgreSQL con Row Level Security.</li>
+            <li data-i18n="p1.b2">Gráficos con Recharts, modo oscuro y diseño adaptable.</li>
+            <li data-i18n="p1.b3">Lógica separada de la interfaz y cubierta con tests en Vitest.</li>
+          </ul>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>Supabase</li><li>Recharts</li><li>Tailwind CSS</li><li>Vitest</li></ul>
+          <div class="proyecto__links">
+            <a class="btn btn--primario btn--chico" href="https://panel-gastos-liart.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.demo">Ver demo</span> ↗</a>
+            <a class="btn btn--secundario btn--chico" href="https://github.com/SantiagoFernandez346/panel-gastos" target="_blank" rel="noopener" data-i18n="projects.code">Código</a>
           </div>
         </div>
-      </section>
-      <section class="section my-services" data-section="section2">
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="skills-heading">What I’m good at?</h2>
-            <div class="line-dec"></div>
-            <span id="skills-description"
-              >Here you can see my skills and the technologies I currently use to develop my web pages.</span
-            >
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-            <div class="service-item">
-                <div class="first-service-icon service-icon"></div>
-                <div class="css-service-icon service-icon"></div>
-                <h4 id="skill-html">HTML5 &amp; CSS3</h4>
-                <p id="skill-html-desc">
-                  Experience in HTML5 and CSS3, with knowledge of responsive design and frameworks such as Bootstrap. Ability to create attractive and functional user interfaces, optimizing the user experience on different devices.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Icon" class="react-icon service-icon" />
-                <h4 id="skill-react">ReactJS</h4>
-                <p id="skill-react-desc">
-                  Experience in ReactJS, with knowledge of component-based architecture and state management. Ability to create dynamic and interactive web applications, optimizing performance and user experience.
+      </article>
 
-                </p>
-              </div>
+      <div class="grilla-proyectos">
+        <article class="proyecto">
+          <a class="proyecto__imagen" href="https://santiagofernandez346.github.io/Componentes-gaming/" target="_blank" rel="noopener">
+            <img src="assets/img/componentes-gaming.jpg" alt="Captura de Componentes Gaming" loading="lazy" width="1200" height="590">
+          </a>
+          <div class="proyecto__cuerpo">
+            <h3>Componentes Gaming</h3>
+            <p data-i18n="p2.desc">Tienda online full stack de componentes de PC gamer, con catálogo por categoría, buscador, detalle de producto, carrito y registro de usuarios.</p>
+            <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MySQL</li></ul>
+            <div class="proyecto__links">
+              <a class="enlace" href="https://santiagofernandez346.github.io/Componentes-gaming/" target="_blank" rel="noopener"><span data-i18n="projects.demo">Ver demo</span> ↗</a>
+              <a class="enlace" href="https://github.com/SantiagoFernandez346/Componentes-gaming" target="_blank" rel="noopener" data-i18n="projects.code">Código</a>
             </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Icon" class="js-icon service-icon" />
-                <h4 id="skill-js">JavaScript</h4>
-                <p id="skill-js-desc">
-                  Proficient in JavaScript programming, including ES6+ features, DOM manipulation, and asynchronous programming. Skilled in building interactive and responsive web applications.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-<img src="assets/images/mysql.png" alt="MySQL Logo" class="mysql-icon service-icon" />
-                <h4 id="skill-mysql">MySQL</h4>
-                <p id="skill-mysql-desc">
-                  Experience with MySQL database management, including designing schemas, writing queries, and optimizing performance for web applications.
-                </p>
-              </div>
-            </div>
-<div class="col-md-6">
-  <div class="service-item">
-    <img src="https://nodejs.org/static/images/logo.svg" alt="NodeJS Logo" class="nodejs-icon service-icon" />
-    <h4 id="skill-nodejs">NodeJS</h4>
-    <p id="skill-nodejs-desc">
-      Proficient in NodeJS, with knowledge of asynchronous programming, event-driven I/O, and REST
-      APIs. Skilled in building scalable and high-performance server-side applications.
-    </p>
-  </div>
-</div>
           </div>
+        </article>
+
+        <article class="proyecto">
+          <a class="proyecto__imagen" href="https://santiagofernandez346.github.io/Cajitas/" target="_blank" rel="noopener">
+            <img src="assets/img/anime-guide.jpg" alt="Captura de Seasonal Anime Guide" loading="lazy" width="1200" height="482">
+          </a>
+          <div class="proyecto__cuerpo">
+            <h3>Seasonal Anime Guide</h3>
+            <p data-i18n="p3.desc">Guía de los animes en emisión con cuenta regresiva a cada estreno, búsqueda, filtro por género, favoritos y modo claro/oscuro, con datos de una API externa.</p>
+            <ul class="tags"><li>JavaScript</li><li>Tailwind CSS</li><li>API REST</li></ul>
+            <div class="proyecto__links">
+              <a class="enlace" href="https://santiagofernandez346.github.io/Cajitas/" target="_blank" rel="noopener"><span data-i18n="projects.demo">Ver demo</span> ↗</a>
+              <a class="enlace" href="https://github.com/SantiagoFernandez346/Cajitas" target="_blank" rel="noopener" data-i18n="projects.code">Código</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="seccion contenedor" id="habilidades">
+      <h2 class="titulo"><span class="titulo__num">03</span><span data-i18n="skills.title">Habilidades</span></h2>
+      <div class="habilidades">
+        <div class="grupo">
+          <h3>Frontend</h3>
+          <ul class="chips"><li>React</li><li>TypeScript</li><li>JavaScript (ES6+)</li><li>HTML5</li><li>CSS3</li><li>Tailwind CSS</li><li>Bootstrap</li><li>Zustand</li><li>Recharts</li><li>React Native</li></ul>
         </div>
-      </section>
-
-      <section class="section my-work" data-section="section3">
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="work-heading">My Work</h2>
-            <div class="line-dec"></div>
-            <span id="work-description"
-              >Here you can see all the projects I've been working on lately and the technologies I've been using.</span
-            >
-          </div>
-          <div class="row">
-            <div class="isotope-wrapper">
-              <div class="isotope-box">
-                <div class="isotope-item" data-type="React">  
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/componentesgaming.png"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="https://github.com/SantiagoFernandez346/Componentes-gaming"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Componentes gaming</h4>
-                      <span>Pagina de venta de componentes</span>
-                    </figcaption>
-                  </figure>
-                  <div class="technologies-used" style="margin-top: 8px; font-style: italic; font-size: 0.9em; display: flex; flex-wrap: wrap; gap: 10px;">
-                    <span><i class="fa fa-html5" style="color:#E34F26;"></i> HTML5</span>
-                    <span><i class="fa fa-css3" style="color:#1572B6;"></i> CSS</span>
-                    <span><i class="fa fa-code" style="color:#F7DF1E;"></i> JavaScript</span>
-                    <span><i class="fa fa-cogs" style="color:#61DAFB;"></i> React</span>
-                    <span><i class="fa fa-database" style="color:#4479A1;"></i> MySQL</span>
-                    <span><i class="fa fa-cogs" style="color:#339933;"></i> NodeJS</span>
-                  </div>
-                </div>
-                <div class="isotope-item" data-type="React">  
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/Anime-seasonal.png"
-                      alt="Seasonal Anime Guide"
-                    />
-                    <figcaption>
-                      <a
-                        href="https://santiagofernandez346.github.io/Cajitas/"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Seasonal Anime Guide</h4>
-                      <span>Desarrolle esta pagina para poder ver los animes que estan actualmente en emision y el tiempo que falta para que se estrenen.</span>
-                    </figcaption>
-                  </figure>
-                  <div class="technologies-used" style="margin-top: 8px; font-style: italic; font-size: 0.9em; display: flex; flex-wrap: wrap; gap: 10px;">
-                    <span><i class="fa fa-html5" style="color:#E34F26;"></i> HTML5</span>
-                    <span><i class="fa fa-cloud" style="color:#38B2AC;"></i> Tailwind</span>
-                    <span><i class="fa fa-code" style="color:#F7DF1E;"></i> JavaScript</span>
-                    <span><i class="fa fa-cloud" style="color:#4A90E2;"></i> API REST</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="grupo">
+          <h3 data-i18n="skills.backend">Backend y datos</h3>
+          <ul class="chips"><li>Node.js</li><li>Express</li><li>APIs REST</li><li>MySQL</li><li>Supabase</li><li>PostgreSQL</li><li>MongoDB</li><li>Python</li></ul>
         </div>
-      </section>
-
-      <section class="section contact-me" data-section="section4">
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="section4-title">Contact Me</h2>
-            <div class="line-dec"></div>
-            <span id="section4-content"
-              >Here you can find the ways to contact me and you can download my resume.</span>
-          </div>
-          <div class="social-network">
-            <ul class="social-icons">                             
-              <li>
-                <a href="https://github.com/SantiagoFernandez346"><i class="fa fa-github"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/santiago-fernandez-7a13aa230/"><i class="fa fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="assets/files/curriculum.pdf" download title="Download Curriculum"><i class="fa fa-download"></i></a>
-              </li>
-            </ul>
-          </div>
+        <div class="grupo">
+          <h3 data-i18n="skills.tools">Herramientas</h3>
+          <ul class="chips"><li>Git</li><li>GitHub</li><li>Vercel</li><li>GitHub Pages</li><li>Vitest</li><li data-i18n="skills.ai">Asistentes de IA</li></ul>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Experiencia y educación -->
+    <section class="seccion contenedor" id="experiencia">
+      <h2 class="titulo"><span class="titulo__num">04</span><span data-i18n="exp.title">Experiencia y educación</span></h2>
+      <div class="dos-columnas">
+        <div>
+          <h3 class="subtitulo" data-i18n="exp.work">Experiencia laboral</h3>
+          <ol class="linea">
+            <li>
+              <p class="linea__fecha">07/2021 – 04/2022</p>
+              <h4><span data-i18n="exp.job">Desarrollador Frontend</span> · Master Leader</h4>
+              <ul class="puntos">
+                <li data-i18n="exp.j1">Desarrollé y mantuve el frontend del sitio web de la empresa con HTML5, CSS y JavaScript.</li>
+                <li data-i18n="exp.j2">Implementé funcionalidades para mostrar y promocionar productos, que ampliaron la visibilidad del catálogo.</li>
+                <li data-i18n="exp.j3">Traduje el feedback de clientes en mejoras concretas de la interfaz.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="subtitulo" data-i18n="exp.education">Educación</h3>
+          <ol class="linea">
+            <li>
+              <p class="linea__fecha"><span>08/2023 – </span><span data-i18n="exp.present">Actualidad</span></p>
+              <h4 data-i18n="exp.e1">Tecnicatura en Programación</h4>
+              <p class="linea__lugar">UNAHUR, Hurlingham</p>
+            </li>
+            <li>
+              <p class="linea__fecha">05/2025 – 08/2025</p>
+              <h4 data-i18n="exp.e2">Curso de MySQL</h4>
+              <p class="linea__lugar">CoderHouse</p>
+            </li>
+            <li>
+              <p class="linea__fecha">05/2021 – 06/2022</p>
+              <h4 data-i18n="exp.e3">Curso de Desarrollo Fullstack</h4>
+              <p class="linea__lugar">CoderHouse</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/language-switch-updated.js"></script>
-    <script>
-      //according to loftblog tut
-      $(".main-menu li:first").addClass("active");
+    <!-- Contacto -->
+    <section class="seccion contenedor" id="contacto">
+      <div class="contacto">
+        <h2 data-i18n="contact.title">¿Hablamos?</h2>
+        <p data-i18n="contact.text">Estoy buscando mi próximo rol como desarrollador frontend. Si tenés una propuesta o querés charlar sobre un proyecto, escribime.</p>
+        <div class="contacto__botones">
+          <a class="btn btn--claro" href="mailto:santiagofernandez3456@gmail.com">santiagofernandez3456@gmail.com</a>
+          <a class="btn btn--contorno" href="https://www.linkedin.com/in/santiago-fernandez-7a13aa230/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn btn--contorno" data-cv href="assets/files/cv-santiago-fernandez-es.pdf" download><span data-i18n="cv.download">Descargar CV</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      var showSection = function showSection(section, isAnimate) {
-        var direction = section.replace(/#/, ""),
-          reqSection = $(".section").filter(
-            '[data-section="' + direction + '"]'
-          ),
-          reqSectionPos = reqSection.offset().top - 0;
+  <footer class="pie contenedor">
+    <p>© <span id="anio">2026</span> Santiago Fernandez</p>
+    <p data-i18n="footer.made">Hecho a mano con HTML, CSS y JavaScript.</p>
+  </footer>
 
-        if (isAnimate) {
-          $("body, html").animate(
-            {
-              scrollTop: reqSectionPos
-            },
-            800
-          );
-        } else {
-          $("body, html").scrollTop(reqSectionPos);
-        }
-      };
-
-      var checkSection = function checkSection() {
-        $(".section").each(function() {
-          var $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var currentId = $this.data("section"),
-              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-            reqLink
-              .closest("li")
-              .addClass("active")
-              .siblings()
-              .removeClass("active");
-          }
-        });
-      };
-
-      $(".main-menu").on("click", "a", function(e) {
-        e.preventDefault();
-        showSection($(this).attr("href"), true);
-      });
-
-      $(window).scroll(function() {
-        checkSection();
-      });
-    </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

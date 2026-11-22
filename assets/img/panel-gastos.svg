@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" role="img" aria-label="Vista previa del Panel de Gastos: tarjetas de resumen, gráficos y lista de movimientos">
+  <rect width="1200" height="740" fill="#0b1220"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <!-- Encabezado -->
+    <text x="48" y="70" fill="#f1f5f9" font-size="34" font-weight="700">Panel de Gastos</text>
+    <text x="48" y="100" fill="#94a3b8" font-size="17">Noviembre de 2026</text>
+    <rect x="884" y="44" width="150" height="40" rx="9" fill="#111a2c" stroke="#26334d"/>
+    <text x="959" y="70" fill="#e2e8f0" font-size="15" text-anchor="middle">Exportar CSV</text>
+    <rect x="1046" y="44" width="40" height="40" rx="9" fill="#111a2c" stroke="#26334d"/>
+    <circle cx="1066" cy="64" r="8" fill="none" stroke="#e2e8f0" stroke-width="2"/>
+    <rect x="1098" y="44" width="56" height="40" rx="9" fill="#111a2c" stroke="#26334d"/>
+    <text x="1126" y="70" fill="#e2e8f0" font-size="15" text-anchor="middle">Salir</text>
+
+    <!-- Tarjetas de resumen -->
+    <g>
+      <rect x="48" y="128" width="356" height="104" rx="14" fill="#111a2c"/>
+      <rect x="48" y="128" width="6" height="104" rx="3" fill="#10b981"/>
+      <text x="76" y="168" fill="#94a3b8" font-size="16">Ingresos</text>
+      <text x="76" y="208" fill="#34d399" font-size="30" font-weight="700">$ 1.201.750</text>
+
+      <rect x="422" y="128" width="356" height="104" rx="14" fill="#111a2c"/>
+      <rect x="422" y="128" width="6" height="104" rx="3" fill="#f43f5e"/>
+      <text x="450" y="168" fill="#94a3b8" font-size="16">Gastos</text>
+      <text x="450" y="208" fill="#fb7185" font-size="30" font-weight="700">$ 714.534</text>
+
+      <rect x="796" y="128" width="356" height="104" rx="14" fill="#111a2c"/>
+      <rect x="796" y="128" width="6" height="104" rx="3" fill="#6366f1"/>
+      <text x="824" y="168" fill="#94a3b8" font-size="16">Saldo</text>
+      <text x="824" y="208" fill="#f8fafc" font-size="30" font-weight="700">$ 487.216</text>
+    </g>
+
+    <!-- Columna izquierda: presupuestos -->
+    <rect x="48" y="252" width="300" height="440" rx="14" fill="#111a2c"/>
+    <text x="72" y="290" fill="#f1f5f9" font-size="19" font-weight="600">Presupuestos</text>
+    <g font-size="14">
+      <text x="72" y="330" fill="#e2e8f0">Ocio</text>
+      <text x="324" y="330" fill="#94a3b8" text-anchor="end">123%</text>
+      <rect x="72" y="340" width="252" height="8" rx="4" fill="#1e293b"/>
+      <rect x="72" y="340" width="252" height="8" rx="4" fill="#e11d48"/>
+      <text x="72" y="368" fill="#fb7185" font-size="13">✕ Te pasaste por $ 6.889</text>
+
+      <text x="72" y="410" fill="#e2e8f0">Transporte</text>
+      <text x="324" y="410" fill="#94a3b8" text-anchor="end">92%</text>
+      <rect x="72" y="420" width="252" height="8" rx="4" fill="#1e293b"/>
+      <rect x="72" y="420" width="232" height="8" rx="4" fill="#f59e0b"/>
+      <text x="72" y="448" fill="#fbbf24" font-size="13">⚠ Cerca del límite</text>
+
+      <text x="72" y="490" fill="#e2e8f0">Comida</text>
+      <text x="324" y="490" fill="#94a3b8" text-anchor="end">72%</text>
+      <rect x="72" y="500" width="252" height="8" rx="4" fill="#1e293b"/>
+      <rect x="72" y="500" width="181" height="8" rx="4" fill="#6366f1"/>
+      <text x="72" y="528" fill="#94a3b8" font-size="13">✓ Quedan $ 70.425</text>
+    </g>
+    <rect x="72" y="572" width="252" height="40" rx="9" fill="#1e293b"/>
+    <text x="88" y="597" fill="#94a3b8" font-size="14">Categoría · Límite</text>
+    <rect x="72" y="626" width="252" height="40" rx="9" fill="#4f46e5"/>
+    <text x="198" y="651" fill="#fff" font-size="15" font-weight="600" text-anchor="middle">Guardar</text>
+
+    <!-- Gráfico mensual -->
+    <rect x="368" y="252" width="384" height="300" rx="14" fill="#111a2c"/>
+    <text x="392" y="290" fill="#f1f5f9" font-size="19" font-weight="600">Ingresos vs. gastos</text>
+    <text x="392" y="312" fill="#94a3b8" font-size="13">Últimos 6 meses</text>
+    <g stroke="#2c2c2a" stroke-width="1">
+      <line x1="392" y1="350" x2="728" y2="350"/>
+      <line x1="392" y1="410" x2="728" y2="410"/>
+      <line x1="392" y1="470" x2="728" y2="470"/>
+      <line x1="392" y1="520" x2="728" y2="520" stroke="#383835"/>
+    </g>
+    <g>
+      <rect x="404" y="414" width="18" height="106" rx="3" fill="#3987e5"/><rect x="424" y="436" width="18" height="84" rx="3" fill="#d95926"/>
+      <rect x="460" y="390" width="18" height="130" rx="3" fill="#3987e5"/><rect x="480" y="432" width="18" height="88" rx="3" fill="#d95926"/>
+      <rect x="516" y="410" width="18" height="110" rx="3" fill="#3987e5"/><rect x="536" y="426" width="18" height="94" rx="3" fill="#d95926"/>
+      <rect x="572" y="380" width="18" height="140" rx="3" fill="#3987e5"/><rect x="592" y="424" width="18" height="96" rx="3" fill="#d95926"/>
+      <rect x="628" y="402" width="18" height="118" rx="3" fill="#3987e5"/><rect x="648" y="420" width="18" height="100" rx="3" fill="#d95926"/>
+      <rect x="684" y="364" width="18" height="156" rx="3" fill="#3987e5"/><rect x="704" y="410" width="18" height="110" rx="3" fill="#d95926"/>
+    </g>
+    <g fill="#898781" font-size="12" text-anchor="middle">
+      <text x="423" y="540">jun</text><text x="479" y="540">jul</text><text x="535" y="540">ago</text>
+      <text x="591" y="540">sept</text><text x="647" y="540">oct</text><text x="703" y="540">nov</text>
+    </g>
+
+    <!-- Gráfico por categoría -->
+    <rect x="770" y="252" width="382" height="300" rx="14" fill="#111a2c"/>
+    <text x="794" y="290" fill="#f1f5f9" font-size="19" font-weight="600">Gastos por categoría</text>
+    <g font-size="13" fill="#898781">
+      <text x="794" y="340">Alquiler</text><rect x="884" y="328" width="244" height="18" rx="4" fill="#d95926"/>
+      <text x="794" y="376">Comida</text><rect x="884" y="364" width="138" height="18" rx="4" fill="#d95926"/>
+      <text x="794" y="412">Servicios</text><rect x="884" y="400" width="44" height="18" rx="4" fill="#d95926"/>
+      <text x="794" y="448">Ocio</text><rect x="884" y="436" width="28" height="18" rx="4" fill="#d95926"/>
+      <text x="794" y="484">Educación</text><rect x="884" y="472" width="27" height="18" rx="4" fill="#d95926"/>
+      <text x="794" y="520">Transporte</text><rect x="884" y="508" width="25" height="18" rx="4" fill="#d95926"/>
+    </g>
+
+    <!-- Lista de movimientos -->
+    <rect x="368" y="572" width="784" height="120" rx="14" fill="#111a2c"/>
+    <g font-size="15">
+      <circle cx="404" cy="608" r="16" fill="#4c0519"/><text x="404" y="614" fill="#fb7185" text-anchor="middle" font-weight="700">−</text>
+      <text x="434" y="604" fill="#f1f5f9">Salida a comer</text><text x="434" y="622" fill="#94a3b8" font-size="12">Comida · 16/11/2026</text>
+      <text x="1128" y="612" fill="#fb7185" text-anchor="end" font-weight="600">− $ 41.000,00</text>
+      <line x1="392" y1="632" x2="1128" y2="632" stroke="#1e293b"/>
+      <circle cx="404" cy="660" r="16" fill="#052e16"/><text x="404" y="666" fill="#34d399" text-anchor="middle" font-weight="700">+</text>
+      <text x="434" y="656" fill="#f1f5f9">Sueldo del mes</text><text x="434" y="674" fill="#94a3b8" font-size="12">Sueldo · 01/11/2026</text>
+      <text x="1128" y="664" fill="#34d399" text-anchor="end" font-weight="600">+ $ 1.002.420,00</text>
+    </g>
+  </g>
+</svg>
