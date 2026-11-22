@@ -32,7 +32,7 @@ const EN = {
   'p1.b1': 'Supabase authentication and a PostgreSQL database with Row Level Security.',
   'p1.b2': 'Recharts charts, dark mode and a responsive layout.',
   'p1.b3': 'Business logic separated from the UI and covered by Vitest tests.',
-  'p2.desc': 'Full-stack online store for gaming PC components, with a catalog by category, search, product details, a shopping cart and user registration.',
+  'p2.desc': 'Full-stack gaming hardware store: filterable catalog, search, cart, checkout, user accounts and CPU/motherboard compatibility. Custom API with JWT authentication and stock control.',
   'p3.desc': "Guide to the season's airing anime with a countdown to each premiere, search, genre filter, favorites and light/dark mode, powered by an external API.",
   'skills.title': 'Skills',
   'skills.backend': 'Backend & data',
