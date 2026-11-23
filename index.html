@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Santiago Fernandez · Desarrollador Frontend</title>
-  <meta name="description" content="Portfolio de Santiago Fernandez, desarrollador frontend junior en Buenos Aires. Proyectos con React, TypeScript, Node.js y Supabase.">
+  <meta name="description" content="Portfolio de Santiago Fernandez, desarrollador frontend junior en Buenos Aires. Proyectos con React, Next.js, TypeScript, PostgreSQL y Node.js.">
   <meta property="og:title" content="Santiago Fernandez · Desarrollador Frontend">
-  <meta property="og:description" content="Proyectos con React, TypeScript, Node.js y Supabase.">
+  <meta property="og:description" content="Proyectos con React, Next.js, TypeScript, PostgreSQL y Node.js.">
   <meta property="og:image" content="https://santiagofernandez346.github.io/portafolio-2/assets/img/santiago.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e7c86'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3ESF%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,27 +105,42 @@
       <h2 class="titulo"><span class="titulo__num">02</span><span data-i18n="projects.title">Proyectos</span></h2>
 
       <article class="proyecto proyecto--destacado">
-        <a class="proyecto__imagen" href="https://panel-gastos-liart.vercel.app/" target="_blank" rel="noopener">
-          <img src="assets/img/panel-gastos.svg" alt="Vista previa del Panel de Gastos" loading="lazy" width="1200" height="740">
+        <a class="proyecto__imagen" href="https://reservaya-five.vercel.app/" target="_blank" rel="noopener">
+          <img src="assets/img/reservaya.jpg" alt="Perfil de una profesional en ReservaYa con el asistente y la agenda de turnos" loading="lazy" width="1200" height="740">
         </a>
         <div class="proyecto__cuerpo">
           <p class="etiqueta-nuevo" data-i18n="projects.latest">Último proyecto</p>
-          <h3 data-i18n="p1.title">Panel de Gastos</h3>
-          <p data-i18n="p1.desc">Aplicación de finanzas personales: registrás ingresos y gastos, ves gráficos de los últimos meses, ponés presupuestos por categoría y exportás todo a CSV.</p>
+          <h3>ReservaYa</h3>
+          <p data-i18n="p4.desc">Plataforma de turnos online: el cliente elige día y hora, deja una seña con Mercado Pago y el turno queda confirmado en su cuenta y en la agenda del profesional.</p>
           <ul class="puntos">
-            <li data-i18n="p1.b1">Login con Supabase y base PostgreSQL con Row Level Security.</li>
-            <li data-i18n="p1.b2">Gráficos con Recharts, modo oscuro y diseño adaptable.</li>
-            <li data-i18n="p1.b3">Lógica separada de la interfaz y cubierta con tests en Vitest.</li>
+            <li data-i18n="p4.b1">Asistente con IA que entiende pedidos como "el jueves a la tarde" y propone horarios reales de la agenda.</li>
+            <li data-i18n="p4.b2">Webhook de Mercado Pago con firma verificada y pagos idempotentes; la base de datos impide turnos superpuestos.</li>
+            <li data-i18n="p4.b3">Tests de integración contra Postgres, end-to-end con Playwright y CI en GitHub Actions.</li>
           </ul>
-          <ul class="tags"><li>React</li><li>TypeScript</li><li>Supabase</li><li>Recharts</li><li>Tailwind CSS</li><li>Vitest</li></ul>
+          <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Drizzle</li><li>Mercado Pago</li><li>Claude API</li><li>Playwright</li></ul>
           <div class="proyecto__links">
-            <a class="btn btn--primario btn--chico" href="https://panel-gastos-liart.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.demo">Ver demo</span> ↗</a>
-            <a class="btn btn--secundario btn--chico" href="https://github.com/SantiagoFernandez346/panel-gastos" target="_blank" rel="noopener" data-i18n="projects.code">Código</a>
+            <a class="btn btn--primario btn--chico" href="https://reservaya-five.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.demo">Ver demo</span> ↗</a>
+            <a class="btn btn--secundario btn--chico" href="https://github.com/SantiagoFernandez346/reservaya" target="_blank" rel="noopener" data-i18n="projects.code">Código</a>
           </div>
         </div>
       </article>
 
       <div class="grilla-proyectos">
+        <article class="proyecto">
+          <a class="proyecto__imagen" href="https://panel-gastos-liart.vercel.app/" target="_blank" rel="noopener">
+            <img src="assets/img/panel-gastos.svg" alt="Vista previa del Panel de Gastos" loading="lazy" width="1200" height="740">
+          </a>
+          <div class="proyecto__cuerpo">
+            <h3 data-i18n="p1.title">Panel de Gastos</h3>
+            <p data-i18n="p1.desc">Aplicación de finanzas personales: registrás ingresos y gastos, ves gráficos de los últimos meses, ponés presupuestos por categoría y exportás todo a CSV. Login con Supabase y base PostgreSQL con Row Level Security.</p>
+            <ul class="tags"><li>React</li><li>TypeScript</li><li>Supabase</li><li>Recharts</li><li>Tailwind CSS</li><li>Vitest</li></ul>
+            <div class="proyecto__links">
+              <a class="enlace" href="https://panel-gastos-liart.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.demo">Ver demo</span> ↗</a>
+              <a class="enlace" href="https://github.com/SantiagoFernandez346/panel-gastos" target="_blank" rel="noopener" data-i18n="projects.code">Código</a>
+            </div>
+          </div>
+        </article>
+
         <article class="proyecto">
           <a class="proyecto__imagen" href="https://santiagofernandez346.github.io/Componentes-gaming/" target="_blank" rel="noopener">
             <img src="assets/img/componentes-gaming.jpg" alt="Captura de Componentes Gaming" loading="lazy" width="784" height="441">
@@ -168,11 +183,11 @@
         </div>
         <div class="grupo">
           <h3 data-i18n="skills.backend">Backend y datos</h3>
-          <ul class="chips"><li>Node.js</li><li>Express</li><li>APIs REST</li><li>MySQL</li><li>Supabase</li><li>PostgreSQL</li><li>MongoDB</li><li>Python</li></ul>
+          <ul class="chips"><li>Next.js</li><li>Node.js</li><li>Express</li><li>APIs REST</li><li>PostgreSQL</li><li>MySQL</li><li>Supabase</li><li>MongoDB</li><li>Python</li></ul>
         </div>
         <div class="grupo">
           <h3 data-i18n="skills.tools">Herramientas</h3>
-          <ul class="chips"><li>Git</li><li>GitHub</li><li>Vercel</li><li>GitHub Pages</li><li>Vitest</li><li data-i18n="skills.ai">Asistentes de IA</li></ul>
+          <ul class="chips"><li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>Vercel</li><li>GitHub Pages</li><li>Vitest</li><li>Playwright</li><li>Claude API</li><li data-i18n="skills.ai">Asistentes de IA</li></ul>
         </div>
       </div>
     </section>
